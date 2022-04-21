@@ -3,13 +3,11 @@ import pandas as pd
 import geopandas as gpd
 import webbrowser
 
-geo_file = 'Project9/data/denver_map.geojson'
+geo_file = 'data/denver_map.geojson'
 gdf = gpd.read_file(geo_file)
 gdf['nbhd_name'] = gdf['nbhd_name'].str.upper()
-#print(gdf['nbhd_name'])
 
 import folium
-
 
 m = folium.Map(
     location=[39.73715, -104.989174],
@@ -17,15 +15,8 @@ m = folium.Map(
     attr='XXX Mapbox Attribution',
     zoom_start = 11
 )
-'''
-folium.GeoJson(
-     gdf,
-     name='Denver'
- ).add_to(m)
-'''
 
-
-neighborhood_data = pd.read_csv('Project9/test/neighborhood_data_test.csv')
+neighborhood_data = pd.read_csv('test/neighborhood_data_test.csv')
 #neighborhood_data['ID_STR'] = neighborhood_data['NBHD_1'].astype(str)
 
 folium.Choropleth(
@@ -39,9 +30,18 @@ folium.Choropleth(
     legend_name = 'value'
 ).add_to(m)
 
+folium.LayerControl().add_to(m)
 
+gdf['long'] = gdf.centroid.x
+gdf['lat'] = gdf.centroid.y
 
-#folium.LayerControl().add_to(m)
+for i, row in gdf.iterrows():
+    folium.Marker(
+        location = [row['lat'], row['long']],
+        popup = folium.Popup('<b>'+row['nbhd_name']+ '</b>', show=False),
+        icon = folium.Icon(color='red', icon='info_sign')
+    ).add_to(m)
+
 m.save("map.html")
 webbrowser.open("map.html")
 
