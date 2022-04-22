@@ -34,14 +34,14 @@ folium.LayerControl().add_to(m)
 
 gdf['long'] = gdf.centroid.x
 gdf['lat'] = gdf.centroid.y
-
+'''
 for i, row in gdf.iterrows():
     folium.Marker(
         location = [row['lat'], row['long']],
         popup = folium.Popup('<b>'+row['nbhd_name']+ '</b>', show=False),
         icon = folium.Icon(color='red', icon='info_sign')
     ).add_to(m)
-
+'''
 m.save("map.html")
 webbrowser.open("map.html")
 
