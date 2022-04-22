@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.2.11)  20 APR 2022 19:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2021/W32TeX) (preloaded format=pdflatex 2022.1.22)  21 APR 2022 19:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **template_Article.tex
 (./template_Article.tex
 LaTeX2e <2021-11-15> patch level 1
-L3 programming layer <2022-02-05>
+L3 programming layer <2022-01-21>
 (c:/texlive/2021/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
 (c:/texlive/2021/texmf-dist/tex/latex/base/size10.clo
@@ -54,7 +54,7 @@ Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 )
 (c:/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2022/02/03 v1.0f TeX engine tests
+Package: iftex 2020/03/06 v1.0d TeX engine tests
 )
 (c:/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
@@ -183,7 +183,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \Hy@SectionHShift=\skip49
 )
 (c:/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
+File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count269
 \l__pdf_internal_box=\box50
 )
@@ -288,14 +288,20 @@ Overfull \hbox (30.11119pt too wide) in paragraph at lines 81--82
  []
 
 [2] [3 <./images//ERD.png>] [4] (./template_Article.aux)
-Package rerunfilecheck Info: File `template_Article.out' has not changed.
-(rerunfilecheck)             Checksum: 365614727B1D3796CFAEB19C14406EAD;1572.
+
+Package rerunfilecheck Warning: File `template_Article.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `template_Article.out':
+(rerunfilecheck)             Before: 37D976C6701C01C03722E423123EBAC0;1584
+(rerunfilecheck)             After:  365614727B1D3796CFAEB19C14406EAD;1572.
  ) 
 Here is how much of TeX's memory you used:
- 8170 strings out of 478278
- 128448 string characters out of 5850546
- 431235 words of memory out of 5000000
- 26281 multiletter control sequences out of 15000+600000
+ 8162 strings out of 478287
+ 128363 string characters out of 5850749
+ 431013 words of memory out of 5000000
+ 26264 multiletter control sequences out of 15000+600000
  473514 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,8n,63p,645b,326s stack positions out of 5000i,500n,10000p,200000b,80000s
