@@ -39,7 +39,7 @@ for i, row in gdf.iterrows():
     folium.Marker(
         location = [row['lat'], row['long']],
         popup = folium.Popup('<b>'+row['nbhd_name']+ '</b>', show=False),
-        icon = folium.Icon(color='red', icon='info_sign')
+        icon = folium.Icon(color='red', icon='Home')
     ).add_to(m)
 '''
 m.save("map.html")
